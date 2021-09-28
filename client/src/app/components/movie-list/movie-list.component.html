@@ -1,0 +1,39 @@
+<!-- <div *ngFor="let movie of movies.text">
+    <ul>
+    <li><h3>{{movie.mov_title}}</h3></li>
+    <li>Año de lanzamiento: {{movie.mov_year}}</li>
+    <li>Duración: {{movie.mov_time}}</li>
+    <li>Lenguaje: {{movie.mov_lang}}</li>
+    <li>fecha de lanzamiento {{movie.mov_dt_rel}}</li>
+    <li>país de lanzamiento{{movie.mov_rel_country}}</li>
+    </ul>
+
+</div>  -->
+<table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Titulo</th>
+        <th scope="col">Duración</th>
+        <th scope="col">País de lanzamiento</th>
+        <th scope="col">Lenguaje</th>
+        <th scope="col">Año de lanzamiento</th>
+        <th scope="col">Fecha de lanzamiento</th>
+
+
+      </tr>
+    </thead>
+    <tbody *ngFor="let movie of movies.text">
+      <tr>
+        <th scope="row">{{movie.mov_id}}</th>
+        <td><h3>{{movie.mov_title}}</h3></td>
+        <td>{{movie.mov_time}}</td>
+        <td>{{movie.mov_rel_country}}</td>
+        <td>{{movie.mov_lang}}</td>
+        <td>{{movie.mov_year}}</td>
+        <td>{{movie.mov_dt_rel}}</td>
+      </tr>
+      <button>edit</button>
+      <button>delete</button>
+    </tbody>
+  </table>
