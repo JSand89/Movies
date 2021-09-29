@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostBinding, OnInit } from '@angular/core';
 import {MovieService} from '../../services/movie.service'
 @Component({
   selector: 'app-movie-list',
@@ -22,4 +22,13 @@ export class MovieListComponent implements OnInit {
     )
   }
 
+  deleteMovie(id:number){
+    this.movieService.deleteMovie(id).subscribe(
+      res=>{
+        console.log(res)
+      },
+      err=>console.log(err)
+    )
+    console.log(id)
+  }
 }

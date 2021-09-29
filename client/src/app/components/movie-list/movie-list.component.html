@@ -33,7 +33,7 @@
         <td>{{movie.mov_year}}</td>
         <td>{{movie.mov_dt_rel}}</td>
       </tr>
-      <button>edit</button>
-      <button>delete</button>
+      <button >edit</button>
+      <button (click)='deleteMovie(movie.mov_id)'>delete</button>
     </tbody>
   </table>

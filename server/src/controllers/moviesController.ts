@@ -19,7 +19,7 @@ class MoviesController{
   }
 
   public async create (req:Request,res:Response): Promise<void>{
-  await pool.query('INSERT INTO movie ?',[req.body] )
+  await pool.query('INSERT INTO movie set ?',[req.body] )
       res.json({text:'Pelicula Guardada'})
   }
   public async delete(req:Request,res:Response){

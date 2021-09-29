@@ -19,11 +19,11 @@ export class MovieService {
   deleteMovie(id:string|number){
     return this.http.delete(`${this.API_URI}/movies/${id}`);
   }
-  saveMovie(game:any){
-    return this.http.post(`${this.API_URI}/movies/`,game)
+  saveMovie(movie:any){
+    return this.http.post(`${this.API_URI}/movies/`,movie)
   }
-  updateGame(id:string|number,updateGame:any):Observable<any>{
-    return this.http.post(`${this.API_URI}/movies/${id}`,updateGame)
+  updateMovie(id:string|number,updateMovie:any):Observable<any>{
+    return this.http.post(`${this.API_URI}/movies/${id}`,updateMovie)
 
   }
 

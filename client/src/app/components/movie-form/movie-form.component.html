@@ -1,8 +1,14 @@
 <div class="col-md-4-offset-md-2">
-    <div class="card">
+    <div class="card" >
         <form class="form-group">
-            <input type="text" name='titulo' placeholder="titulo" class="form-control" autofocus> 
-                <button class="btn btn-success">Agregar</button>       
+            <input type="text"  name='titulo' [(ngModel)]="movie.mov_title" placeholder="titulo" class="form-control" autofocus> 
+            <input type="number"  name='year' [(ngModel)]="movie.mov_year" placeholder="Año de lanzamiento" class="form-control" autofocus> 
+            <input type="number"  name='time' [(ngModel)]="movie.mov_time" placeholder="Duracion" class="form-control" autofocus> 
+            <input type="text"  name='lang' [(ngModel)]="movie.mov_lang" placeholder="Lenguaje" class="form-control" autofocus> 
+            <input type="text"  name='country' [(ngModel)]="movie.country" placeholder="Pais" class="form-control" autofocus> 
+            <input type="date" name="date" [(ngModel)]='movie.mov_dt_rel' class="form-control">
+
+                <button class="btn btn-success" (click)="saveNewMovie()">Agregar</button>       
         </form>
     </div>
 </div>
