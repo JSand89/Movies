@@ -9,31 +9,36 @@
     </ul>
 
 </div>  -->
-<table class="table table-striped">
+<div class="table-responsive">
+<table class="table  table-dark table-bordered table-sm">
     <thead>
       <tr>
         <th scope="col">Id</th>
         <th scope="col">Titulo</th>
         <th scope="col">Duración</th>
-        <th scope="col">País de lanzamiento</th>
+        <th scope="col">País</th>
         <th scope="col">Lenguaje</th>
-        <th scope="col">Año de lanzamiento</th>
-        <th scope="col">Fecha de lanzamiento</th>
-
-
+        <th scope="col">Año</th>
+        <th scope="col">Fecha</th>
+        <th scope="col"></th>
       </tr>
     </thead>
     <tbody *ngFor="let movie of movies.text">
       <tr>
         <th scope="row">{{movie.mov_id}}</th>
-        <td><h3>{{movie.mov_title}}</h3></td>
+        <td>{{movie.mov_title}}</td>
         <td>{{movie.mov_time}}</td>
         <td>{{movie.mov_rel_country}}</td>
         <td>{{movie.mov_lang}}</td>
         <td>{{movie.mov_year}}</td>
-        <td>{{movie.mov_dt_rel}}</td>
-      </tr>
-      <button >edit</button>
-      <button (click)='deleteMovie(movie.mov_id)'>delete</button>
+        <td>{{movie.mov_dt_rel.slice(0,-14).split('-').reverse().join('/')}}</td>
+    
+      <td class="btn-group">
+      <button class="btn btn-warning" ><i class="fas fa-pen"></i></button>
+      <button (click)='deleteMovie(movie.mov_id)'class="btn btn-danger"><i class="fas fa-trash-alt"></i></button>
+      </td>
+    </tr>
     </tbody>
   </table>
+</div>
+<div class="foot">Desarrollado por Javier Sanchez y Fernanda Sanchez</div>
