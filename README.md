@@ -6,7 +6,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 ## new terminal
 CD server 
 npm run build
-## new terminal
+## New terminal
 CD server
 npm run dev
 
@@ -31,6 +31,10 @@ ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password
 flush privileges
 
 this is because direct not count whit the autentification system required for mysql 8.0
+
+## Project Result
+
+![](https://i.ibb.co/pRL8rLf/Diapositiva4.png)
 
 ## Team Work
 Javier Sanchez
